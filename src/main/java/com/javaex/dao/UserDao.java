@@ -25,4 +25,12 @@ public class UserDao {
 		
 		return count;
 	}
+
+
+	public void userInsert(UserVo userVo) {
+		System.out.println("UserDao.userInsert()");
+		
+		sqlSession.insert("user.insert", userVo);
+	}
+
 }
